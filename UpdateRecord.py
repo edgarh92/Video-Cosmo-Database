@@ -1,9 +1,11 @@
 import azure.cosmos.cosmos_client as cosmos_client
 import azure.cosmos.errors as errors
+import os
 
 # Set up the connection to Azure
-endpoint = "<Your Azure Cosmos DB endpoint>"
-key = "<Your Azure Cosmos DB key>"
+endpoint = os.environ["COSMOS_ENDPOINT"]
+key = os.environ["COSMOS_KEY"]
+
 client = cosmos_client.CosmosClient(endpoint, key)
 
 # Get a reference to the database and container
