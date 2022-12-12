@@ -1,4 +1,3 @@
-# Import the necessary libraries
 import azure.cosmos.cosmos_client as cosmos_client
 import azure.cosmos.errors as errors
 
