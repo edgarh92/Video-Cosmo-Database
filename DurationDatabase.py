@@ -1,10 +1,11 @@
 import azure.cosmos.cosmos_client as cosmos_client
 import azure.cosmos.errors as errors
 
+import os
+
 # Set up the connection to Azure
-endpoint = "<Your Azure Cosmos DB endpoint>"
-key = "<Your Azure Cosmos DB key>"
-client = cosmos_client.CosmosClient(endpoint, key)
+endpoint = os.environ["COSMOS_ENDPOINT"]
+key = os.environ["COSMOS_KEY"]
 
 # Create a database to store the video information
 database_name = "my_database"
